@@ -8,6 +8,7 @@ module.exports = class DecksCreate1653667297684 {
             CREATE TABLE "deck" (
                 "id" uuid NOT NULL DEFAULT uuid_generate_v4(),
                 "name" character varying NOT NULL,
+                "description" text,
                 "creator" character varying,
                 "createdAt" TIMESTAMP NOT NULL DEFAULT now(),
                 "updatedAt" TIMESTAMP NOT NULL DEFAULT now(),

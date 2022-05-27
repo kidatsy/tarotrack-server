@@ -8,7 +8,7 @@ module.exports = class CardsCreate1653667526474 {
             CREATE TYPE "public"."card_arcana_enum" AS ENUM('major', 'minor')
         `);
         await queryRunner.query(`
-            CREATE TYPE "public"."card_suit_enum" AS ENUM('cups', 'wands', 'swords', 'pentacles')
+            CREATE TYPE "public"."card_suit_enum" AS ENUM('cups', 'pentacles', 'swords', 'wands')
         `);
         await queryRunner.query(`
             CREATE TABLE "card" (

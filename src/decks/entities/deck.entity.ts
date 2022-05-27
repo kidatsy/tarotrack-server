@@ -18,6 +18,9 @@ export class Deck {
   @Column()
   name: string;
 
+  @Column({ type: 'text', nullable: true })
+  description: string;
+
   @Column({ nullable: true })
   creator: string;
 

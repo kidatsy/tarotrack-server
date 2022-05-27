@@ -8,7 +8,7 @@ module.exports = class CardArchetypesCreate1653678252441 {
             CREATE TYPE "public"."card_archetype_arcana_enum" AS ENUM('major', 'minor')
         `);
         await queryRunner.query(`
-            CREATE TYPE "public"."card_archetype_suit_enum" AS ENUM('cups', 'wands', 'swords', 'pentacles')
+            CREATE TYPE "public"."card_archetype_suit_enum" AS ENUM('cups', 'pentacles', 'swords', 'wands')
         `);
         await queryRunner.query(`
             CREATE TABLE "card_archetype" (
@@ -52,7 +52,7 @@ module.exports = class CardArchetypesCreate1653678252441 {
             ALTER TABLE "card" DROP COLUMN "archetypeId"
         `);
         await queryRunner.query(`
-            CREATE TYPE "public"."card_suit_enum" AS ENUM('cups', 'wands', 'swords', 'pentacles')
+            CREATE TYPE "public"."card_suit_enum" AS ENUM('cups', 'pentacles', 'swords', 'wands')
         `);
         await queryRunner.query(`
             ALTER TABLE "card"

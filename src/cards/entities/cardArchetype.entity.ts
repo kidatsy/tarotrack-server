@@ -11,9 +11,9 @@ export enum CardArcana {
 
 export enum CardSuits {
   CUPS = 'cups',
-  WANDS = 'wands',
-  SWORDS = 'swords',
   PENTACLES = 'pentacles',
+  SWORDS = 'swords',
+  WANDS = 'wands',
 }
 
 export const cardValuesMajor = [
