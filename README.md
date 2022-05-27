@@ -41,3 +41,11 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+
+## CLI
+
+To create a new entity/module:
+
+```bash
+$ nest g resource ENTITYNAMES
+```
