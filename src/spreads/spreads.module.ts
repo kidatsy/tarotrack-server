@@ -4,6 +4,6 @@ import { SpreadsController } from './spreads.controller';
 
 @Module({
   controllers: [SpreadsController],
-  providers: [SpreadsService]
+  providers: [SpreadsService],
 })
 export class SpreadsModule {}

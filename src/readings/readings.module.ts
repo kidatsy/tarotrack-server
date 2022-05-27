@@ -4,6 +4,6 @@ import { ReadingsController } from './readings.controller';
 
 @Module({
   controllers: [ReadingsController],
-  providers: [ReadingsService]
+  providers: [ReadingsService],
 })
 export class ReadingsModule {}
