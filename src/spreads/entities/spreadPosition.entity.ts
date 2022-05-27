@@ -2,16 +2,14 @@ import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
-  OneToMany,
   ManyToOne,
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { SpreadPosition } from './spreadPosition.entity';
-import { User } from '../../users/entities/user.entity';
+import { Spread } from './spread.entity';
 
 @Entity()
-export class Spread {
+export class SpreadPosition {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -21,11 +19,11 @@ export class Spread {
   @Column({ type: 'text', nullable: true })
   description: string;
 
-  @OneToMany(type => SpreadPosition, spreadPosition => spreadPosition.spread)
-  positions: SpreadPosition[];
+  @Column({ type: 'int' })
+  order: number;
 
-  @ManyToOne(type => User, user => user.spreads)
-  user: User;
+  @ManyToOne(type => Spread, spread => spread.positions)
+  spread: Spread;
 
   @CreateDateColumn()
   createdAt: string;

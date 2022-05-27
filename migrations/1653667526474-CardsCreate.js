@@ -1,7 +1,7 @@
 const { MigrationInterface, QueryRunner } = require("typeorm");
 
-module.exports = class CardCreating1653636437193 {
-    name = 'CardCreating1653636437193'
+module.exports = class CardsCreate1653667526474 {
+    name = 'CardsCreate1653667526474'
 
     async up(queryRunner) {
         await queryRunner.query(`
