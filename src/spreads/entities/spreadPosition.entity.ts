@@ -7,6 +7,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { Spread } from './spread.entity';
+import { ReadingCardOrientations } from '../../readings/entities/readingCardPosition.entity';
 
 @Entity()
 export class SpreadPosition {
@@ -21,6 +22,14 @@ export class SpreadPosition {
 
   @Column({ type: 'int' })
   order: number;
+
+  @Column({
+    type: 'enum',
+    enum: ReadingCardOrientations,
+    default: null,
+    nullable: true,
+  })
+  defaultOrientation: ReadingCardOrientations;
 
   @ManyToOne(type => Spread, spread => spread.positions)
   spread: Spread;
