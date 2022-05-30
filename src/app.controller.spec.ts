@@ -16,7 +16,7 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return empty string', () => {
-      expect(appController.getBase()).toBe('');
+      expect(appController.getIndex()).toBe('');
     });
   });
 });

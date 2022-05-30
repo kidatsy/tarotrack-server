@@ -8,7 +8,7 @@ export class AppController {
   ) {}
 
   @Get()
-  index(): string {
+  getIndex(): string {
     return this.appService.getBase();
   }
 }
