@@ -8,6 +8,7 @@ import { ReadingsModule } from './readings/readings.module';
 import { SpreadsModule } from './spreads/spreads.module';
 import { UsersModule } from './users/users.module';
 import { User } from './users/entities/user.entity';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -17,6 +18,7 @@ import { User } from './users/entities/user.entity';
     ReadingsModule,
     SpreadsModule,
     UsersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
